@@ -3,8 +3,9 @@ import { FaDev } from "react-icons/fa";
 import { BiMessageRoundedCheck } from "react-icons/bi";
 import { RiNotificationLine } from "react-icons/ri";
 import { FiSearch } from "react-icons/fi";
+import { AiFillPropertySafety } from "react-icons/ai";
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggle = () => {
@@ -14,7 +15,10 @@ const Navigation = () => {
   return (
     <div className="header">
       <div className="headerContainer">
-        <div className="headerContainer__hamburgerMenu"></div>
+        <div
+          className="headerContainer__hamburgerMenu"
+          onClick={() => props.openMenu()}
+        ></div>
         <a href="htts://dev.to" className="headerContainer__logo">
           <FaDev size="3.125rem" />
         </a>

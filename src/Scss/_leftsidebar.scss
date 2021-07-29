@@ -90,3 +90,70 @@
     }
   }
 }
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+
+  .hidden {
+    display: none;
+  }
+
+  &__content {
+    max-width: 300px;
+    width: 90%;
+    background-color: #fff;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    position: relative; //need this for overlay,excepted this
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid var(--main-2);
+
+      h2 {
+        font-size: 1.2rem;
+        flex: 1; //set all space for h2, button auto width
+      }
+
+      button {
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 0 5px rgba($color: #000000, $alpha: 0.05);
+          background-color: rgba($color: #000000, $alpha: 0.05);
+          color: var(--font-color);
+          z-index: 1;
+        }
+      }
+    }
+
+    &__items {
+      padding: 0.5rem;
+
+      ul li {
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .overlay {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 300;
+  }
+}
