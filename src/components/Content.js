@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ArticleComponent from "./ArticleComponent";
+import ArticleSkeleton from "./ArticleSkeleton";
 
 const Content = () => {
   const [articles, setArticles] = useState(null);
@@ -74,6 +75,9 @@ const Content = () => {
       {articles?.map((article, id) => {
         return <ArticleComponent key={id} data={article} />;
       })}
+
+                                                        {/* articles là null < !null  // true >*/}
+      {!articles && [1, 2, 3, 4, 5].map((a) => <ArticleSkeleton key={a} />)}
     </main>
   );
 };
