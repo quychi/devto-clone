@@ -4,6 +4,16 @@ This repository contains code for Dev.to clone in reactjs.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+- Setting Layout
+- Creating Hamburger Menu
+- Getting data from API
+- Creating Skeleton UI
+- Infinite Loading
+- Mobile Responsive
+- React Hooks
+- Sass styling
+- Advanced Conditional Rendering
+
 ## Available Scripts
 
 In the project directory, you can run:
